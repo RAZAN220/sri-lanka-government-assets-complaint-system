@@ -167,7 +167,7 @@ sri-lanka-government-assets-complaint-system/
 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/sri-lanka-government-assets-complaint-system.git
+git clone https://github.com/RAZAN220/sri-lanka-government-assets-complaint-system.git
 ```
 
 2. Move the project to your XAMPP `htdocs` folder.
