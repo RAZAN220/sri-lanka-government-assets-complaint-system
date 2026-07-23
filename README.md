@@ -1,4 +1,4 @@
-# 🇱🇰 Sri Lanka Government Assets Complaint Management System
+# Sri Lanka Government Assets Complaint Management System
 
 A modern web-based **Government Assets Complaint Management System** developed to help citizens report issues related to public infrastructure across **Sri Lanka's 9 Provinces and 25 Districts**. The system enables government authorities to efficiently manage, monitor, and resolve complaints through a role-based platform.
 
