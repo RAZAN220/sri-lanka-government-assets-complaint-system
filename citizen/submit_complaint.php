@@ -3,7 +3,7 @@
 require_once '../config/database.php';
 require_once '../config/auth.php';
 requireLogin();
-if ($_SESSION['role'] !== 'citizen') { header('Location: ../index.php'); exit; }
+if ($_SESSION['role'] !== 'citizen') { redirectTo('index.php'); }
 
 $provinces = $pdo->query("SELECT * FROM provinces")->fetchAll();
 $categories = $pdo->query("SELECT * FROM complaint_categories")->fetchAll();

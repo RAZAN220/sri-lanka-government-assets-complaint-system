@@ -3,7 +3,7 @@
 require_once '../config/database.php';
 require_once '../config/auth.php';
 requireLogin();
-if ($_SESSION['role'] !== 'admin') { header('Location: ../index.php'); exit; }
+if ($_SESSION['role'] !== 'admin') { redirectTo('index.php'); }
 
 $totalUsers = $pdo->query("SELECT COUNT(*) FROM users")->fetchColumn();
 $totalComplaints = $pdo->query("SELECT COUNT(*) FROM complaints")->fetchColumn();

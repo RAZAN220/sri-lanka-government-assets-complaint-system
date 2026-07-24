@@ -1,0 +1,20 @@
+DirectoryIndex index.php
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# Allow direct access to project files under the subfolder.
+RewriteBase /sri-lanka-government-assets-complaint-system/
+
+# Route folder roots to their index pages.
+RewriteRule ^admin/?$ /sri-lanka-government-assets-complaint-system/admin/index.php [L]
+RewriteRule ^citizen/?$ /sri-lanka-government-assets-complaint-system/citizen/index.php [L]
+RewriteRule ^district/?$ /sri-lanka-government-assets-complaint-system/district/index.php [L]
+RewriteRule ^api/?$ /sri-lanka-government-assets-complaint-system/api/index.php [L]
+
+# Resolve plain paths to PHP files when they exist.
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{DOCUMENT_ROOT}/sri-lanka-government-assets-complaint-system/%{REQUEST_URI}\.php -f
+RewriteRule ^(.+)$ /sri-lanka-government-assets-complaint-system/$1.php [L]
+</IfModule>

@@ -2,8 +2,9 @@
 // district/complaints.php
 require_once '../config/database.php';
 require_once '../config/auth.php';
+require_once '../config/functions.php';
 requireLogin();
-if ($_SESSION['role'] !== 'district_officer') { header('Location: ../index.php'); exit; }
+if ($_SESSION['role'] !== 'district_officer') { redirectTo('index.php'); }
 $district_id = $_SESSION['district_id'];
 
 // Fetch complaints for this district

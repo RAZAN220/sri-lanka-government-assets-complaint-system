@@ -2,6 +2,7 @@
 // citizen/my_complaints.php
 require_once '../config/database.php';
 require_once '../config/auth.php';
+require_once '../config/functions.php';
 requireLogin();
 $user_id = $_SESSION['user_id'];
 $complaints = $pdo->prepare("SELECT c.*, cat.name as cat_name, d.name as dist_name FROM complaints c 

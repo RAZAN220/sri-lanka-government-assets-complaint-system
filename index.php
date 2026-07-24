@@ -2,6 +2,7 @@
 // index.php
 require_once 'config/database.php';
 require_once 'config/auth.php';
+require_once 'config/functions.php';
 requireLogin();
 $user_id = $_SESSION['user_id'];
 $role = $_SESSION['role'];
@@ -27,7 +28,7 @@ $inProgress = getStatusCount($pdo, 'in_progress');
                     <span class="d-none d-sm-inline fw-semibold"><?= $_SESSION['fullname'] ?></span>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0 mt-2">
-                    <li><a class="dropdown-item" href="../logout.php"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+                    <li><a class="dropdown-item" href="logout.php"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
                 </ul>
             </div>
         </div>
